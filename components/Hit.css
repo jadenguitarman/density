@@ -1,0 +1,194 @@
+/* Hits */
+
+.hit {
+  color: #21243d;
+  height: 100%;
+}
+
+[data-density-level="5"] .hit {
+  border: 1px solid rgba(80, 80, 80, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.hit-image {
+  width: 100%;
+  object-fit: contain;
+  padding: 0 10%;
+  aspect-ratio: 1.25;
+}
+
+@media (max-width: 899px) {
+  .hit-image {
+    padding: 0;
+    aspect-ratio: 1;
+  }
+}
+
+.hit-info-container {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+[data-hit-key="empty"] {
+  display: none;
+}
+
+.hit-row {
+  margin: 0;
+  font-size: 1.5vh;
+}
+
+.hit-row:first-child {
+  color: #21243d;
+  font-weight: bold;
+  opacity: 0.7;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  font-size: 2vh;
+  line-height: 2vh;
+  margin: 0 0 0.5vh 0;
+}
+
+[data-density-level="2"] .hit-row:first-child,
+[data-density-level="3"] .hit-row:first-child {
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  margin: 0 0 0.5vh 0;
+}
+
+[data-density-level="4"] .hit-row:first-child,
+[data-density-level="5"] .hit-row:first-child {
+  font-size: 1vh;
+  line-height: 1vh;
+  margin: 0 0 0.25vh 0;
+}
+
+.hit-row[data-hit-key="name"],
+.hit-row[data-hit-key="nameWithBrand"],
+.hit-row[data-hit-key="description"] {
+  padding: 0.1em 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  margin: 2vh 0;
+}
+
+.hit-row[data-hit-key="name"],
+.hit-row[data-hit-key="nameWithBrand"] {
+  font-weight: bold;
+  font-size: 4vh;
+  line-height: 4vh;
+}
+
+[data-density-level="1"] .hit-row[data-hit-key="name"],
+[data-density-level="1"] .hit-row[data-hit-key="nameWithBrand"] {
+  text-align: center;
+}
+
+[data-density-level="2"] .hit-row[data-hit-key="name"],
+[data-density-level="2"] .hit-row[data-hit-key="nameWithBrand"] {
+  font-size: 3.5vh;
+  line-height: 3.5vh;
+  margin: 1.5vh 0;
+}
+
+[data-density-level="3"] .hit-row[data-hit-key="name"],
+[data-density-level="3"] .hit-row[data-hit-key="nameWithBrand"] {
+  font-size: 3vh;
+  line-height: 3vh;
+  margin: 1.5vh 0;
+}
+
+[data-density-level="3"] .hit-row[data-hit-key="description"] {
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  margin: 1vh 0;
+}
+
+[data-density-level="4"] .hit-row[data-hit-key="name"],
+[data-density-level="4"] .hit-row[data-hit-key="nameWithBrand"] {
+  font-size: 2vh;
+  line-height: 2vh;
+  margin: 1vh 0;
+}
+
+[data-density-level="4"] .hit-row[data-hit-key="description"] {
+  font-size: 1.25vh;
+  line-height: 1.25vh;
+  margin: 0.5vh 0;
+}
+
+[data-density-level="5"] .hit-row[data-hit-key="name"],
+[data-density-level="5"] .hit-row[data-hit-key="nameWithBrand"] {
+  font-size: 1.5vh;
+  line-height: 1.5vh;
+  margin: 0.5vh 0;
+}
+
+[data-density-level="5"] .hit-row[data-hit-key="description"] {
+  font-size: 1vh;
+  line-height: 1vh;
+  margin: 0.25vh 0;
+}
+
+.hit-footer {
+  color: #bf8f11;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hit-footer > *:not(:first-child) {
+  margin-left: 4px;
+}
+
+[data-density-level="3"] .hit-footer > * {
+  font-size: 2vh;
+  line-height: 2.5vh;
+}
+
+[data-density-level="4"] .hit-footer > * {
+  font-size: 1.5vh;
+  line-height: 2vh;
+}
+
+[data-density-level="5"] .hit-footer > * {
+  font-size: 1vh;
+  line-height: 1.25vh;
+}
+
+[data-hit-key="price"]::before {
+  content: "$";
+}
+
+[data-hit-key="price"] {
+  font-weight: bold;
+  text-align: center;
+  font-size: 3vh;
+}
+
+[data-hit-key="rating"] {
+  border: 1px solid rgba(226, 164, 0, 0.5);
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+[data-hit-key="rating"]::before {
+  content: "★";
+  margin-right: 2px;
+}
+
+.hit-row[data-hit-key="freeShipping"] {
+  margin-top: 0.5vh;
+  text-align: center;
+}
